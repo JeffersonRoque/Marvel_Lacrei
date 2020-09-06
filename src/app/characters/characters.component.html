@@ -1,0 +1,8 @@
+<div fxFlex fxLayout="column">
+    <div fxLayout="row wrap">
+        <!--No nosso flex Layout dividimos o tamanho da coluna (100px) por 25 cada vai ocupar 3 direção dele é coluna -->
+        <div fxFlex="25" fxFlex.md="33" fxFlex.sm="50" fxFlex.xs="100" fxLayout="column" *ngFor="let character of allCharacters | async" style="padding: 15px">
+            <app-character [character]="character"></app-character>
+        </div>
+    </div>
+</div>
