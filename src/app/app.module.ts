@@ -17,13 +17,36 @@ import { HttpClientModule } from '@angular/common/http';
 import { FlexLayoutModule} from '@angular/flex-layout';
 import { MatCardModule } from '@angular/material/card';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { AngularFireModule } from "@angular/fire";
+import { AngularFireAuthModule } from "@angular/fire/auth";
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { environment } from '../environments/environment';
+import { LoginComponent } from './admin/login/login.component';
+import { RegisterComponent } from './admin/register/register.component';
+import { ForgotPasswordComponent } from './admin/forgot-password/forgot-password.component';
+import { VerifyEmailComponent } from './admin/verify-email/verify-email.component';
+
+var firebaseConfig = {
+  apiKey: "AIzaSyBDVyNMzMYq7BKzPc5oLlsJP7LXhMK-55Y",
+  authDomain: "marvel-lacrei.firebaseapp.com",
+  databaseURL: "https://marvel-lacrei.firebaseio.com",
+  projectId: "marvel-lacrei",
+  storageBucket: "marvel-lacrei.appspot.com",
+  messagingSenderId: "146418545840",
+  appId: "1:146418545840:web:d306ad382afe30b6d83775",
+  measurementId: "G-ZGC5ZWKFSN"
+};
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     CharacterComponent,
-    CharactersComponent
+    CharactersComponent,
+    LoginComponent,
+    RegisterComponent,
+    ForgotPasswordComponent,
+    VerifyEmailComponent
   ],
   imports: [
     BrowserModule,
@@ -35,17 +58,22 @@ import { MatFormFieldModule } from '@angular/material/form-field';
     MatIconModule,
     MatListModule,
     RouterModule.forRoot([
-      {
-        path: '', redirectTo: '/characters', pathMatch: 'full'
-      },
-      {
-        path: 'characters', component: CharactersComponent
-      }
+      { path: '', redirectTo: '/characters', pathMatch: 'full' },
+      { path: 'characters', component: CharactersComponent },
+
+      { path:  'login',component:  LoginComponent},
+      { path:  'register', component:  RegisterComponent },
+      { path:  'forgot-password', component:  ForgotPasswordComponent },
+      { path:  'verify-email', component:  VerifyEmailComponent }
     ]),
     HttpClientModule,
     FlexLayoutModule,
     MatCardModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    AngularFireModule.initializeApp(firebaseConfig),
+    AngularFireAuthModule,
+    AngularFirestoreModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]

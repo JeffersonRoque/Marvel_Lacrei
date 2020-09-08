@@ -1,0 +1,30 @@
+<form>
+  <div class="imgcontainer">
+    <img src="../../../../src/img/avatar.png" alt="Avatar" class="avatar">
+  </div>
+
+  <div class="container">
+    <label for="uname"><b>e-mail</b></label>
+    <input type="text" placeholder="e-mail" #userName required>
+
+    <label for="psw"><b>Senha</b></label>
+    <input type="password" placeholder="Senha" #userPassword required>
+
+    <div class="formGroup">
+      
+    </div>
+    <button type="submit" (click)="authService.SignIn(userName.value, userPassword.value)"><i class="fas fa-sign-in-alt"></i> Login</button>
+    <span class="center">ou</span><br>
+    <button type="button" class="googlebtn" (click)="authService.GoogleAuth()"><i class="fab fa-google"></i> Login com o Google</button> 
+    <label>
+      <input type="checkbox" checked="checked" name="remember"> Remember me
+    </label>
+  </div>
+
+  <div class="container" style="background-color:#f1f1f1">
+    <span class="psw">Não tem conta? <a href="/register">Registrar</a></span>
+    <br>
+    <br>
+    <span class="psw">Esqueceu a <a href="/forgot-password">senha?</a></span>
+  </div>
+</form>
