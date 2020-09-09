@@ -29,28 +29,28 @@ Funcionalidades da Aplicação:
 Run `ng serve` para o dev server. para `http://localhost:4200/`. O aplicativo ira automaticamente para a rota 'http://localhost:4200/characters'.
 
 ![GitHub Logo](src/assets/img/personagens.png)
-Tela Principal Personagens
+Tela Principal Personagens.
 
 Em 'http://localhost:4200/login'. O aplicativo ira direcionar para a tela de Login.
 
 ![GitHub Logo](src/assets/img/login.png)
-Tela Login de Usuários
+Tela Login de Usuários.
 
 Em 'http://localhost:4200/register'. O aplicativo ira direcionar para a tela de Cadastro de Usuários.
 
 ![GitHub Logo](src/assets/img/registro.png)
-Tela Cadastro de Usuários
+Tela Cadastro de Usuários.
 
 Em 'http://localhost:4200/forgot-password'. O aplicativo ira direcionar para a tela de Recuperar senha.
 
 ![GitHub Logo](src/assets/img/recuperar-senha.png)
-Tela Recuperar Senha
+Tela Recuperar Senha.
 
-## Execução Vercel
+## VERCEL
 
 O mesmo podera ser executado através do Vercel
 
-'https://marvel-lacrei.vercel.app/characters' - Tela Principal - Personagens
-'https://marvel-lacrei.vercel.app/login' - Tela de Login.
-'https://marvel-lacrei.vercel.app/register' - Cadastro de Usuários.
-'https://marvel-lacrei.vercel.app/forgot-password' - Cadastro de Usuários.
+* Tela Principal - Personagens: 'https://marvel-lacrei.vercel.app/characters'.
+* Tela de Login: 'https://marvel-lacrei.vercel.app/login'.
+* Cadastro de Usuários: 'https://marvel-lacrei.vercel.app/register'.
+* Cadastro de Usuários: 'https://marvel-lacrei.vercel.app/forgot-password'.
